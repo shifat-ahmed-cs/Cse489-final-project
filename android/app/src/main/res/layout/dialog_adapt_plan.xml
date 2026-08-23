@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/surface"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adapt My Plan 🔄"
+        android:textColor="@color/text_primary"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Select how you\'d like BodyPilot to recalibrate your plan:"
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp" />
+
+    <RadioGroup
+        android:id="@+id/rg_adapt_reasons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/rb_injury"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/accent_coral"
+            android:text="🤕 I'm injured or feel joint pain"
+            android:textColor="@color/text_primary" />
+
+        <RadioButton
+            android:id="@+id/rb_less_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/secondary"
+            android:text="⏱️ I have less time today (e.g. 20-30 min)"
+            android:textColor="@color/text_primary" />
+
+        <RadioButton
+            android:id="@+id/rb_tired"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/accent_amber"
+            android:text="😴 I'm too tired / need rest or recovery"
+            android:textColor="@color/text_primary" />
+
+        <RadioButton
+            android:id="@+id/rb_harder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/primary"
+            android:text="💪 Workouts are too easy / make harder"
+            android:textColor="@color/text_primary" />
+
+        <RadioButton
+            android:id="@+id/rb_missed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/accent_emerald"
+            android:text="🔄 I missed yesterday's workout / reschedule"
+            android:textColor="@color/text_primary" />
+    </RadioGroup>
+
+    <!-- Dynamic details input (e.g. pain area or minutes) -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_adapt_detail"
+        style="@style/BodyPilotTextInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Specify (e.g. knee, shoulder, or minutes)"
+        android:visibility="gone">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_adapt_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_primary" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_confirm_adapt"
+        style="@style/BodyPilotButton.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Recalibrate Now" />
+
+</LinearLayout>

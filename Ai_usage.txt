@@ -1,0 +1,26 @@
+========================================================================
+CSE 489: Mobile Application Development - Final Project
+AI Usage Justification & Specification Document
+Project: BodyPilot — Adaptive Fitness & Nutrition Companion
+========================================================================
+
+AI ASSISTANCE OVERVIEW:
+-----------------------
+AI assistance (via Antigravity AI Coding Assistant) was utilized during the development of this project for:
+1. System Architecture & End-to-End Design: Formulating an end-to-end decoupled system comprising a Node.js/Express/MongoDB REST API Backend and a Native Android (Kotlin/MVVM) Client with Jetpack Navigation, ViewBinding, and Material 3 design tokens.
+2. Adaptive Intelligence Engine Development: Implementing the core rule-based and mathematical algorithms for:
+   - Dynamic workout plan generation (7-day split formulation based on fitness goals and equipment).
+   - Biomechanical injury adaptation (auto-replacing conflicting movements with safe joint-friendly alternatives).
+   - Dynamic time compression (recalibrating workouts to 15-30 minute high-density sessions).
+   - Progressive overload calculations (+2.5% to +5% weight progression based on completed logs).
+   - Mifflin-St Jeor BMR/TDEE nutrition calculation and macro-matched food substitution.
+   - Conversational AI Fitness Coach intent classification.
+3. Dataset Construction & Seeding: Compiling and structuring a comprehensive dataset of 111 fitness exercises (`exercises.json`) and 135 food items (`foods.json`) with detailed macronutrient profiles and allergen tags.
+4. Android UI Layout Composition & Styling: Designing 20+ responsive XML layouts adhering to Material 3 Dark Theme aesthetics with custom vector drawables, hero gradients, and MPAndroidChart analytics views.
+5. Automated API Test Suite & Bug Verification: Writing and executing an end-to-end 19-point automated test suite (`test_api_suite.js`) to validate authentication, schema validation, route handling, and database operations.
+
+JUSTIFICATION OF AI USAGE:
+--------------------------
+All AI-generated code and architectural schemas were thoroughly verified, tested, and validated against the course requirements and software engineering best practices.
+The AI assisted in enforcing clean MVVM separation of concerns, eliminating boilerplate across 14 REST API route handlers, configuring seamless In-Memory MongoDB fallbacks for standalone execution, and ensuring zero-crash runtime reliability across both the backend server and Android application.
+========================================================================

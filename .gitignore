@@ -1,0 +1,18 @@
+# Node / Backend
+backend/node_modules/
+backend/.env.local
+backend/npm-debug.log*
+
+# Android / Gradle
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/.idea/
+*.iml
+.gradle/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
